@@ -11,7 +11,8 @@ import MobileNav from "./MobileNav";
 
 const Navbar = async () => {
   const nextCookies = cookies();
-  //const { user } = await getServerSideUser(nextCookies);
+  const  user  = null
+    //await getServerSideUser(nextCookies);
 
   return (
     <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
@@ -34,7 +35,7 @@ const Navbar = async () => {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {/* {user ? null : (
+                  {user ? null : (
                     <Link
                       href="/sign-in"
                       className={buttonVariants({
@@ -50,7 +51,7 @@ const Navbar = async () => {
                   )}
 
                   {user ? (
-                    <UserAccountNav user={user} />
+                    <UserAccountNav />
                   ) : (
                     <Link
                       href="/sign-up"
@@ -73,7 +74,7 @@ const Navbar = async () => {
                         aria-hidden="true"
                       />
                     </div>
-                  )} */}
+                  )} 
 
                   <div className="ml-4 flow-root lg:ml-6">
                     <Cart />
