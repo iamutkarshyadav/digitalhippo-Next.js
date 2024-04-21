@@ -25,7 +25,7 @@ export default buildConfig({
   db: mongooseAdapter({
     url: process.env.MONGODB_URL!,
   }),
-    typescript: {
-      outputFile:path.resolve(__dirname,"payload-types.ts"),
-  }
+  typescript: {
+    outputFile: path.resolve(__dirname, "payload-types.ts"),
+  },
 });
