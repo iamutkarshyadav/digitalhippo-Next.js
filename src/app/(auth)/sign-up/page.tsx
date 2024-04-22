@@ -54,6 +54,8 @@ const Page = () => {
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
     //mutate({ email, password });
+
+    // sends this data to server 
   };
 
   return (
