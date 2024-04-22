@@ -14,10 +14,11 @@ import {
   AuthCredentialsValidator,
   TAuthCredentialsValidator,
 } from "@/lib/validators/account-credentials-validator";
-import { trpc } from "@/trpc/client";
+
 import { toast } from "sonner";
 import { ZodError } from "zod";
 import { useRouter } from "next/navigation";
+import { trpc } from "@/trpc/client";
 
 const Page = () => {
   const {
@@ -30,10 +31,10 @@ const Page = () => {
 
   const router = useRouter();
 
-  const { data } = trpc.anyApiRoute.useQuery();
-console.log(data)
+
+
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
-    //mutate({ email, password });
+       mutate({ email, password });
     // sends this data to server
   };
 
