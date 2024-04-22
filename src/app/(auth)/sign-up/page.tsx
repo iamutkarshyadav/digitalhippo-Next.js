@@ -31,10 +31,14 @@ const Page = () => {
 
   const router = useRouter();
 
-
+  const { mutate, isLoading } = trpc
+    .auth
+    .createPayloadUser
+    .useMutation({
+  })
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
-       mutate({ email, password });
+    mutate({ email, password });
     // sends this data to server
   };
 
